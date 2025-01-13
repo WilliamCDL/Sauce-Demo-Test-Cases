@@ -1,19 +1,23 @@
 /// <reference types="Cypress" />
 
-import { loginPageElements } from "../../../PageObjects/PageActions/LoginPageActions"
-import { inventoryPageElements } from "../../../PageObjects/PageActions/InventoryPageActions"
+import loginPageActions  from "../../../PageObjects/PageActions/LoginPageActions"
+import  inventoryPageActions  from "../../../PageObjects/PageActions/InventoryPageActions"
 
-const Login_Elements = new loginPageElements
-const Inventory_Elements = new inventoryPageElements
+
 describe('Page Object technical challenge', function(){
-
-    it('Login Page', function(){
+    //Antes de cada teste retornar a pagina de login
+    this.beforeEach(() => {
         cy.visit('https://www.saucedemo.com/v1/')
-        Login_Elements.tipeUsername('standard_user')
-        Login_Elements.tipePassword('secret_sauce')
-        Login_Elements.clickLoginButton()
+        }
+    )
 
-        Inventory_Elements.checkLoginSuccess()
+    //Verificar se com dados validos o login é realizado corretamente, com assertiva para verificar o titulo "Products"
+    it('Login to inventory page successfully', function(){
+        loginPageActions.tipeUsername('standard_user')
+        loginPageActions.tipePassword('secret_sauce')
+        loginPageActions.clickLoginButton()
+
+        inventoryPageActions.checkLoginSuccess()
     })
 
 
