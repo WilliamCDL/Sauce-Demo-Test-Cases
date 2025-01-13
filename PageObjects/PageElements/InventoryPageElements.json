@@ -1,0 +1,6 @@
+{
+    "InventoryPageLocators" : {
+        "product_label":".product_label"
+        }
+
+}
