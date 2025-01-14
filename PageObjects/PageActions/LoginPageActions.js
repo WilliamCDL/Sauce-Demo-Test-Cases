@@ -1,27 +1,27 @@
 const loginElementLocators = require('../PageElements/LoginPageElements.json')
 
- class loginPageElements{
+class loginPageElements {
     // Localiza o elemento/campo para o preenchimento do login e digita o dado informado
-    tipeUsername(userToBeUse){
+    tipeUsername(userToBeUse) {
         cy.get(loginElementLocators.LoginPageLocators.username_text).type(userToBeUse)
         return
     }
     // Localiza o elemento/campo para o preenchimento da senha e digita o dado informado
-    tipePassword(passwordToBeUse){
+    tipePassword(passwordToBeUse) {
         cy.get(loginElementLocators.LoginPageLocators.password_text).type(passwordToBeUse)
         return
     }
     // Localiza o botão para realizar login e realiza a ação de click do mouse
-    clickLoginButton(){
+    clickLoginButton() {
         cy.get(loginElementLocators.LoginPageLocators.login_button).click()
         return
     }
 
     // Verificação da existencia da palavra "Products"
-    checkErrorMessage(textToBeVerify){
-        cy.get(loginElementLocators.LoginPageLocators.error_text).should('have.text',textToBeVerify)
-        return 
-    
+    checkErrorMessage(textToBeVerify) {
+        cy.get(loginElementLocators.LoginPageLocators.error_text).should('have.text', textToBeVerify)
+        return
+
     }
 }
 

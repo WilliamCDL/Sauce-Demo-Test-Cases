@@ -1,6 +1,10 @@
 {
-    "InventoryPageLocators" : {
-        "product_label":".product_label"
-        }
-
+    "InventoryPageLocators": {
+        "produc_label": ".product_label",
+        "inventory_item_namne": ".inventory_item_name",
+        "inventory_item_description": ".inventory_item_desc",
+        "inventory_item_price": ".inventory_item_price",
+        "inventory_item_button": ".btn_primary",
+        "inventory_item_image": ".inventory_item_img"
+    }
 }
