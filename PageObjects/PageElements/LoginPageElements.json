@@ -1,9 +1,8 @@
 {
-    "LoginPageLocators" : {
-        "username_text":"[data-test='username']",
-        "password_text":"[data-test='password']",
-        "login_button":"#login-button",
-        "error_text":"[data-test='error']"
-        }
-
+    "LoginPageLocators": {
+        "username_text": "[data-test='username']",
+        "password_text": "[data-test='password']",
+        "login_button": "#login-button",
+        "error_text": "[data-test='error']"
+    }
 }
