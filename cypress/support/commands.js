@@ -1,6 +1,7 @@
 import loginPageActions from "../../PageObjects/PageActions/LoginPageActions"
 import inventoryPageActions from "../../PageObjects/PageActions/InventoryPageActions"
-
+import productPageActions from "../../PageObjects/PageActions/ItemPageActions"
+//teste de login
 Cypress.Commands.add('loginTest', (name, username, password, expected) => {
     //para testes com login ou senha vazios faz-se necessario uma verificação para não executar comandos pois 
     // o type não aceita strings vazias
@@ -26,7 +27,7 @@ Cypress.Commands.add('loginTest', (name, username, password, expected) => {
     }
     return
 });
-
+//realizar login
 Cypress.Commands.add('login', (username, password) => {
 
     loginPageActions.tipeUsername(username)
@@ -35,7 +36,7 @@ Cypress.Commands.add('login', (username, password) => {
 
     return
 });
-
+//verificação de produto/s numa lista
 Cypress.Commands.add('productsChecking', (index, name, description, price, butonName, imageName) => {
 
     inventoryPageActions.checkProducName(index, name)
@@ -43,5 +44,15 @@ Cypress.Commands.add('productsChecking', (index, name, description, price, buton
     inventoryPageActions.checkProducPrice(index, price)
     inventoryPageActions.checkProducButton(index, butonName)
     inventoryPageActions.checkProducImage(index, imageName)
+    return
+});
+//verificação de um produto individual após ser selecionado
+Cypress.Commands.add('productChecking', (name, description, price, butonName, imageName) => {
+
+    productPageActions.checkProducName(name)
+    productPageActions.checkProducDescription(description)
+    productPageActions.checkProducPrice(price)
+    productPageActions.checkProducButton(butonName)
+    productPageActions.checkProducImage(imageName)
     return
 });
