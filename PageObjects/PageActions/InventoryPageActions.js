@@ -37,6 +37,9 @@ class inventoryPageElements {
         return
 
     }
+    clickNameItem(index){
+        cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_namne).eq(index).click()
+    }
     //cy.get(inventoryElementLocators.InventoryPageLocators.list_of_products).forEach((item,index) => {
     // console.log
     //    })
