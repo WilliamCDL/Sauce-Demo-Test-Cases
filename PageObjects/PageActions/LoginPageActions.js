@@ -16,6 +16,13 @@ const loginElementLocators = require('../PageElements/LoginPageElements.json')
         cy.get(loginElementLocators.LoginPageLocators.login_button).click()
         return
     }
+
+    // Verificação da existencia da palavra "Products"
+    checkErrorMessage(textToBeVerify){
+        cy.get(loginElementLocators.LoginPageLocators.error_text).should('have.text',textToBeVerify)
+        return 
+    
+    }
 }
 
 module.exports = new loginPageElements();

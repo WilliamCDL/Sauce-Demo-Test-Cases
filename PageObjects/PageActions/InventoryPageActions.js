@@ -2,8 +2,8 @@ const inventoryElementLocators = require('../PageElements/InventoryPageElements.
 
 class inventoryPageElements{
     // Verificação da existencia da palavra "Products"
-    checkLoginSuccess(){
-        cy.get(inventoryElementLocators.InventoryPageLocators.product_label).should('have.text','Products')
+    checkLoginSuccess(textToBeVerify){
+        cy.get(inventoryElementLocators.InventoryPageLocators.product_label).should('have.text',textToBeVerify)
         return 
     
     }
