@@ -1,20 +1,50 @@
-Pré-requisitos
-	Para rodar os testes, há alguns requisitos que precisam estar instalados no sistema
+# Projeto de Automação de Testes
 
-Sistemas
-	Antes de rodar, certifique-se de que os seguintes sistemas estejam instalados em seu computador.
-	- Node.js ( v20.18.0 no momento de criação e execução dos testes)
-	- npm (10.8.2 no momento de criação e execução dos testes)
-	- visual studio code ( ou alguma outra IDE de sua preferencia, porém essa foi a utilizada no momento da construção dos testes )
- 
-Execução
-	Após realizar o download do projeto e abrir no VS code, abra o terminal da IDE e insira o comando "npx cypress open", onde ira abrir a interface com os arquivos que possuem os testes executaveis, basta clicar sobre o nome e a suite de testes sera executada
+## Pré-requisitos
+Para rodar os testes, há alguns requisitos que precisam estar instalados no sistema:
 
-Projeto
-	Este projeto visa automatizar ações de login, visualização de informações, seleção e remoção de itens, e finalização de um fluxo no caso especifico uma compra.
+### Sistemas
+Antes de rodar, certifique-se de que os seguintes sistemas estejam instalados em seu computador:
+- **Node.js**: Versão 20.18.0 (versão utilizada na criação e execução dos testes).
+- **npm**: Versão 10.8.2 (versão utilizada na criação e execução dos testes).
+- **Visual Studio Code**: Ou alguma outra IDE de sua preferência. Contudo, o VS Code foi utilizado durante a construção dos testes.
 
-Arquitetura dos arquivos
-	Visando aplicar o padrão de projeto Page Object Model (POM), foi criada a pasta "PageObjects" a qual contem subpastas "PageAction" para ações sobre elementos na pagina web e "PageElements" a qual visa salvar o endereço/caminho para exercer a ação realizada na PageAction
-	Para chamadas de ações que eram realizadas com certa frequencia ou reutilização de um fluxo como login, a o arquivo "commands.js" na pasta de support do cypress contem a criações de "funções" visando a reutilização de codigo durante os testes
-	Para executar um mesmo teste com diferentes entradas foi criada a pasta "data-driven" em fixtures contendo conjuntos de dados a serem utilizados em chamadas em loop.
-	O controle e execução dos testes estão contidos na pasta "integration/TestCases", se encontra aqui os testes selecionaveis na ferramenta aberta pós comando de execução via terminal. 
+## Execução
+Após realizar o download do projeto e abri-lo no VS Code:
+1. Abra o terminal da IDE.
+2. Insira o comando:
+
+   ```bash
+   npx cypress open
+   ```
+
+3. Isso abrirá a interface do Cypress com os arquivos contendo os testes executáveis.
+4. Clique sobre o nome do teste desejado, e a suíte de testes será executada.
+
+## Projeto
+Este projeto visa automatizar as seguintes ações:
+- Login.
+- Visualização de informações.
+- Seleção e remoção de itens.
+- Finalização de um fluxo (especificamente, um fluxo de compra).
+
+## Arquitetura dos Arquivos
+O projeto foi estruturado utilizando o padrão de projeto **Page Object Model (POM)**. A seguir, estão os principais diretórios e sua função:
+
+### Estrutura Principal
+- **`PageObjects`**: Diretório principal para abstração de elementos e ações na página.
+  - **`PageAction`**: Contém classes ou arquivos responsáveis por realizar ações sobre elementos na página web.
+  - **`PageElements`**: Contém classes ou arquivos para armazenar os seletores/caminhos de elementos utilizados nas ações definidas em `PageAction`.
+
+### Reutilização de Código
+- **`commands.js`**: Localizado na pasta `support` do Cypress. Este arquivo contém funções reutilizáveis, como o login, para simplificar e otimizar os testes.
+
+### Data-Driven Testing
+- **`data-driven`**: Localizado em `fixtures`. Este diretório contém conjuntos de dados utilizados em chamadas iterativas (loop) para executar testes com diferentes entradas.
+
+### Testes
+- **`integration/TestCases`**: Diretório onde estão localizados os testes. Esses testes podem ser selecionados e executados diretamente na interface aberta pelo comando Cypress.
+
+## Conclusão
+Este projeto foi desenvolvido para automatizar fluxos de testes de forma organizada e reutilizável. Siga as instruções acima para configurar e executar os testes com sucesso. Em caso de dúvidas, consulte a documentação/arquivos do projeto ou entre em contato pelo email will.correia.lima@gmail.com.
+
