@@ -43,6 +43,7 @@ class itemPageElements {
     clickButton2() {
         cy.get(itemyElementLocators.ItemPageLocators.item_button2).click()
     }
+    //verifica contador de itens no carrinho
     cartCount(index) {
         cy.get(itemyElementLocators.ItemPageLocators.car_count).should('have.text', index)
     }

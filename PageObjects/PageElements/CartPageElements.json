@@ -1,8 +1,20 @@
 {
     "CartPageLocators": {
-        "cart_button2":".btn_secondary",
+        "cart_button2":".item_pricebar > .btn_secondary",
         "cart_checkout":".btn_action",
         "cart_count":".fa-layers-counter",
-        "cart_item_namne": ".inventory_item_name"
+        "cart_item_namne": ".inventory_item_name",
+        "fisrt_name_tex": "[data-test='firstName']",
+        "last_name_text": "[data-test='lastName']",
+        "postal_code_text": "[data-test='postalCode']",
+        "button_continue":".btn_primary",
+        "erro_text": "[data-test='error']",
+        "value_itens":".summary_subtotal_label",
+        "value_tax":".summary_tax_label",
+        "total_sum":".summary_total_label",
+        "button_finish":".btn_action",
+        "button_cancel":".cart_cancel_link",
+        "final_message1":".complete-header",
+        "final_message2":".complete-text"
     }
 }

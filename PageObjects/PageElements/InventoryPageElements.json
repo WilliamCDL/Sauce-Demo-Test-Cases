@@ -4,10 +4,12 @@
         "inventory_item_namne": ".inventory_item_name",
         "inventory_item_description": ".inventory_item_desc",
         "inventory_item_price": ".inventory_item_price",
-        "inventory_item_button": ".btn_primary",
+        "inventory_item_button": ".pricebar > .btn_primary",
         "inventory_item_button2": ".btn_secondary",
         "inventory_item_image": ".inventory_item_img",
         "car_count":".fa-layers-counter",
-        "car_button":".shopping_cart_container"
+        "car_button":".shopping_cart_container",
+        "menu_button":".bm-burger-button > button",
+        "reset_button":"#reset_sidebar_link"
     }
 }
