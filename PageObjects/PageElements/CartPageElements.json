@@ -1,0 +1,8 @@
+{
+    "CartPageLocators": {
+        "cart_button2":".btn_secondary",
+        "cart_checkout":".btn_action",
+        "cart_count":".fa-layers-counter",
+        "cart_item_namne": ".inventory_item_name"
+    }
+}
