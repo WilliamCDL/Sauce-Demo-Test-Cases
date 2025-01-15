@@ -5,6 +5,7 @@
         "item_price": ".inventory_details_price",
         "item_button": ".btn_primary",
         "item_button2": ".btn_secondary",
-        "item_image": ".inventory_details_img"
+        "item_image": ".inventory_details_img",
+        "car_count":".fa-layers-counter"
     }
 }

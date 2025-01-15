@@ -31,18 +31,32 @@ class inventoryPageElements {
         return
 
     }
+    checkProducButton2(index, textToBeVerify) {
+        cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_button2).eq(index).should('have.text', textToBeVerify)
+        return
+
+    }
     //Verifica se o produto possuo a src correta
     checkProducImage(index, textToBeVerify) {
         cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_image).find('img').eq(index).should('have.attr', 'src', textToBeVerify)
         return
 
     }
-    clickNameItem(index){
+    clickNameItem(index) {
         cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_namne).eq(index).click()
     }
-    //cy.get(inventoryElementLocators.InventoryPageLocators.list_of_products).forEach((item,index) => {
-    // console.log
-    //    })
-}
 
+    clickButton(index) {
+        cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_button).eq(index).click()
+    }
+    clickButton2(index) {
+        cy.get(inventoryElementLocators.InventoryPageLocators.inventory_item_button2).eq(index).click()
+    }
+    cartCount(index) {
+        cy.get(inventoryElementLocators.InventoryPageLocators.car_count).should('have.text', index)
+    }
+    cartClick() {
+        cy.get(inventoryElementLocators.InventoryPageLocators.car_button).click()
+    }
+}
 module.exports = new inventoryPageElements();
