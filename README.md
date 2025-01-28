@@ -45,6 +45,11 @@ O projeto foi estruturado utilizando o padrão de projeto **Page Object Model (P
 ### Testes
 - **`integration/TestCases`**: Diretório onde estão localizados os testes. Esses testes podem ser selecionados e executados diretamente na interface aberta pelo comando Cypress.
 
+## PDFs do Projeto
+A seguir estão os arquivos em PDF relacionados ao projeto, que fornecem informações adicionais:
+
+- [Requisitos e Cenários com BDD](https://github.com/WilliamCDL/Sauce-Demo-Test-Cases/raw/main/Requisitos_Cen%C3%A1rios%20com%20BDD.pdf)
+- [Teste Exploratório Baseado em Sessão](https://github.com/WilliamCDL/Sauce-Demo-Test-Cases/raw/main/Teste%20Exploratorio%20Baseado%20em%20Sess%C3%A3o.pdf)
+
 ## Conclusão
 Este projeto foi desenvolvido para automatizar fluxos de testes de forma organizada e reutilizável. Siga as instruções acima para configurar e executar os testes com sucesso. Em caso de dúvidas, consulte a documentação/arquivos do projeto ou entre em contato pelo email will.correia.lima@gmail.com.
-
